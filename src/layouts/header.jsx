@@ -8,11 +8,10 @@ import { HiOutlineShoppingBag } from "react-icons/hi2";
 export const Header = () => {
 
     return (
-        <>
-            <Navbar fluid rounded className='shadow-lg shadow-[#00000025] py-5 w-[100%] '>
+        <div className='flex  '>
+            <Navbar fluid className='shadow-lg shadow-[#00000025] py-5 w-[100%] fixed top-0 z-50'>
                 <Navbar.Brand href="https://flowbite-react.com">
-                    <img src={logo} className="mr-3" alt="Flowbite React Logo" />
-                    {/* <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Flowbite React</span> */}
+                    <img src={logo} className="mr-3"  />
                 </Navbar.Brand>
                 <div className="flex md:order-2 items-center gap-5">
                 <Avatar rounded size="xs" className='border-1 border-[#4a4a4a70] rounded-full' />
@@ -44,7 +43,7 @@ export const Header = () => {
                 </Navbar.Collapse>
             </Navbar>
 
-        </>
+        </div>
     );
 };
 
