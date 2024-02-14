@@ -1,30 +1,20 @@
 
 import './firstSection.sass'
-import banner from "../../../assets/img/heading-pages-06.jpg"
-
 export const FirstSectionAbout = () => {
     return (
         <>
-            <div className='w-[100%]'>
-                <div className='relative'>
-                    <img src={banner} alt="" />
-                    <h1 className='absolute top-[50%] left-[50%] text-white font-bold text-2xl translate-x-[-50%] translate-y-[-50%]'>CONTACT</h1>
-                </div>
-                <div className='flex p-5 w-[100%] gap-10 items-center  justify-center'>
-                    <div className='w-[fit-content] '>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1017897.8926849058!2d-7.276687689548292!3d33.0685291506176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sma!4v1707911469233!5m2!1sfr!2sma" width="600" height="520" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div className='py-16 flex justify-center gap-7 '>
+                <div className='bannerParent w-[22%] h-[50vh] '>
+                    <div className='banner'>
+                        {/* <img src={banner}  /> */}
                     </div>
-                    <div className='w-[40%]'>
-                        <h1 className='text-2xl'>Send us your message</h1>
-                        <div className='flex flex-col gap-2 p-4 '>
-                            <form className='flex flex-col gap-3'>
-                                <input type="text" placeholder='Name' className='p-2 w-[100%]' />
-                                <input type="email" placeholder='Email' className='p-2 w-[100%]' />
-                                <input type="number" placeholder='Phone' className='p-2 w-[100%]' />
-                                <textarea name="" placeholder='Message' cols="30" rows="10" className='w-[100%]'></textarea>
-                            </form>
-                            <button className='bg-black text-white py-2 px-8 w-[fit-content] rounded-full'>SEND</button>
-                        </div>
+                </div>
+                <div className='w-[50%] flex flex-col gap-4'>
+                    <h1 className='text-xl font-medium '>Our story</h1>
+                    <p className='text-slate-500'>Phasellus egestas nisi nisi, lobortis ultricies risus semper nec. Vestibulum pharetra ac ante ut pellentesque. Curabitur fringilla dolor quis lorem accumsan, vitae molestie urna dapibus. Pellentesque porta est ac neque bibendum viverra. Vivamus lobortis magna ut interdum laoreet. Donec gravida lorem elit, quis condimentum ex semper sit amet. Fusce eget ligula magna. Aliquam aliquam imperdiet sodales. Ut fringilla turpis in vehicula vehicula. Pellentesque congue ac orci ut gravida. Aliquam erat volutpat. Donec iaculis lectus a arcu facilisis, eu sodales lectus sagittis. Etiam pellentesque, magna vel dictum rutrum, neque justo eleifend elit, vel tincidunt erat arcu ut sem. Sed rutrum, turpis ut commodo efficitur, quam velit convallis ipsum, et maximus enim ligula ac ligula. Vivamus tristique vulputate ultricies. Sed vitae ultrices orci.</p>
+                    <div className='border-l-4 px-4 text-slate-500'>
+                        <p>Creativity is just connecting things. When you ask creative people how they did something, they feel a little guilty because they didn't really do it, they just saw something. It seemed obvious to them after a while.</p>
+                        <p>- Steve Job’s</p>
                     </div>
                 </div>
             </div>

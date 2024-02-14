@@ -6,8 +6,8 @@ import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from 'react-
 export const FooterSection = () => {
     return (
         <>
-            <Footer container>
-                <div className="w-full">
+            <Footer container className='bg-slate-100'>
+                <div className="w-full ">
                     <div className="w-full flex p-5  sm:flex gap-10 md:flex md:grid-cols-1">
                         <div className='w-[36%] flex flex-col gap-4'>
                             {/* <Footer.Brand
@@ -57,14 +57,13 @@ export const FooterSection = () => {
                             <div className='flex flex-col gap-2 w-[40%]'>
                                 <Footer.Title title="NEWSLETTER" className='font-bold text-black' />
                                 <input type="text" placeholder='Email Address' className='border-0 border-b outline-none focus:outline-none focus:border-b-red-600' />
-                                <button className='bg-black text-white py-3 w-[fit-content] px-6 rounded-full'>SUBSCRIBE</button>
+                                <button className='bg-black mt-3 text-white py-3 w-[fit-content] px-6 rounded-full'>SUBSCRIBE</button>
                             </div>
                         </div>
                     </div>
                     <Footer.Divider />
                     <div className="w-full sm:flex sm:items-center sm:justify-between">
                         <Footer.Copyright href="#" by="Copyright" year={2022} />
-
                     </div>
                 </div>
             </Footer>

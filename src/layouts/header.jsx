@@ -37,10 +37,10 @@ export const Header = () => {
                     
                 </div>
                 <Navbar.Collapse className='transition duration-75 '>
-                    <Link to="/">Home</Link>
-                    <Link to="/shop">shop</Link>
-                    <Link to="/about">About</Link>
-                    <Link to="/contact">Contact</Link>
+                    <Link className='hover:underline' to="/">Home</Link>
+                    <Link className='hover:underline' to="/shop">shop</Link>
+                    <Link className='hover:underline' to="/about">About</Link>
+                    <Link className='hover:underline' to="/contact">Contact</Link>
                 </Navbar.Collapse>
             </Navbar>
 
