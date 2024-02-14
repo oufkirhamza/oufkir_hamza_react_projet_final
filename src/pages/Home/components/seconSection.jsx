@@ -1,5 +1,4 @@
 import React from 'react';
-import './secondSection.sass'
 import img1 from "../../../assets/img/banner-02.jpg"
 import img2 from "../../../assets/img/banner-03.jpg"
 import img3 from "../../../assets/img/banner-04.jpg"
