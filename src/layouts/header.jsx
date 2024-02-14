@@ -9,7 +9,7 @@ export const Header = () => {
 
     return (
         <>
-            <Navbar fluid rounded className='shadow-lg shadow-[#00000025] py-5 '>
+            <Navbar fluid rounded className='shadow-lg shadow-[#00000025] py-5 w-[100%] '>
                 <Navbar.Brand href="https://flowbite-react.com">
                     <img src={logo} className="mr-3" alt="Flowbite React Logo" />
                     {/* <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Flowbite React</span> */}
