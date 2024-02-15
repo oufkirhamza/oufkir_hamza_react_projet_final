@@ -6,7 +6,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 
 export const Header = () => {
-
+const navigate = useNavigate('')
     return (
         <div className='flex  '>
             <Navbar fluid className='shadow-lg shadow-[#00000025] py-5 w-[100%] fixed top-0 z-50'>
@@ -14,7 +14,7 @@ export const Header = () => {
                     <img src={logo} className="mr-3"  />
                 </Navbar.Brand>
                 <div className="flex md:order-2 items-center gap-5">
-                <Avatar rounded size="xs" className='border-1 border-[#4a4a4a70] rounded-full' />
+                <Avatar onClick={()=>{navigate('/profile')}} rounded size="xs" className='border-1 cursor-pointer border-[#4a4a4a70] rounded-full' />
                 <HiOutlineShoppingBag className='text-2xl border-l-2 w-10' />
                     {/* <Dropdown
                         arrowIcon={false}

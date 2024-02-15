@@ -23,7 +23,7 @@ import img20 from "../assets/img/X_Crazyfast_FG_Yellow_IE2375_HM1.jpg"
 
 export const MyContext = createContext()
 export const MyProvider = ({ children }) => {
-    const [test, setTest] = useState('Hello Test')
+    const [data, setData] = useState([])
     const [products, setProducts] = useState([
         {
             name: "PUMP WORKOUT HOODIE",
@@ -205,11 +205,11 @@ export const MyProvider = ({ children }) => {
             size: "M",
             image: img20,
         },
-    ])
+    ]);
     return (
 
         <>
-            <MyContext.Provider value={[products, setProducts]} >
+            <MyContext.Provider value={[products, setProducts, data, setData]} >
                 {children}
             </MyContext.Provider>
         </>
