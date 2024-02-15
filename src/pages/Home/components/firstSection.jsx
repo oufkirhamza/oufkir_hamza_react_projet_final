@@ -14,15 +14,15 @@ export const FirstSection = () => {
     return (
         <div className='pt-[68px]'>
             <div className="h-56 sm:h-64 xl:h-80 2xl:h-[60vh] ">
-                <Carousel indicators={false} slideInterval={5000}>
+                <Carousel className='rounded-none' indicators={false} slideInterval={5000}>
                     {
                         images.map(element =>
-                            <div className="relative">
-                                <img src={element} alt="..." />
+                            <div className="relative  overflow-hidden">
+                                <img className='rounded-none' src={element} alt="..." />
                                 <div className="absolute text-center text-white top-[50%] items-center left-[50%] translate-x-[-50%] translate-y-[-50%] flex flex-col gap-4">
                                     <h1 className="text-2xl">New collection </h1>
                                     <h1 className="text-6xl font-bold">NEW ARRIVALS </h1>
-                                    <button className="bg-white px-5 py-2 w-[fit-content]  text-black rounded-full ">SHOP NOW</button>
+                                    <button className="bg-white px-5 py-2 w-[fit-content] text-black rounded-full ">SHOP NOW</button>
                                 </div>
                             </div>
                         )
