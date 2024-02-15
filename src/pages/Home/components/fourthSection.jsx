@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import './fourthSection.sass'
 import pic from "../../../assets/img/camilla-carvalho-Cgb4gMKRcMA-unsplash.jpg"
 import { MyContext } from '../../../utils/contextProvider';
 import lll from "../../../assets/img/Copa_Icon_Firm_Ground_Soccer_Cleats_Blue_GZ2528_HM1.jpg"
