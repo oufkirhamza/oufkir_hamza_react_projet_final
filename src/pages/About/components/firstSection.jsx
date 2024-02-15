@@ -1,8 +1,13 @@
 
 import './firstSection.sass'
+import banner from "../../../assets/img/header2.png"
 export const FirstSectionAbout = () => {
     return (
         <>
+            <div className='relative object-cover pt-[68px]'>
+                <img src={banner} alt="" />
+                <h1 className='absolute top-[50%] left-[50%] text-white font-bold text-5xl translate-x-[-50%] translate-y-[-50%]'>CONTACT</h1>
+            </div>
             <div className='py-16 flex justify-center gap-7 '>
                 <div className='bannerParent w-[22%] h-[50vh] '>
                     <div className='banner'>
