@@ -56,7 +56,7 @@ export const FooterSection = () => {
                             </div>
                             <div className='flex flex-col gap-2 w-[40%]'>
                                 <Footer.Title title="NEWSLETTER" className='font-bold text-black' />
-                                <input type="text" placeholder='Email Address' className='border-0 border-b outline-none focus:outline-none focus:border-b-red-600' />
+                                <input type="text" placeholder='Email Address' className='bg-transparent border-0 border-b outline-none focus:outline-none focus:border-b-red-600' />
                                 <button className='bg-black mt-3 text-white py-3 w-[fit-content] px-6 rounded-full'>SUBSCRIBE</button>
                             </div>
                         </div>
