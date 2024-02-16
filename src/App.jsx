@@ -9,6 +9,8 @@ import { Header } from './layouts/header';
 import { FooterSection } from './layouts/footer';
 import { Profile } from './pages/Profile/profile';
 import { Signup } from './pages/signUp/signup';
+import { Cart } from './pages/cart/cart';
+import { Product } from './pages/Product/product';
 function App() {
   return (
     <MyProvider>
@@ -20,6 +22,8 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/profile' element={<Profile />} />
         <Route path='/signup' element={<Signup />} />
+        <Route path='/cart' element={<Cart />} />
+        <Route path='/product/:id' element={<Product />} />
       </Routes >
       <FooterSection />
     </MyProvider>

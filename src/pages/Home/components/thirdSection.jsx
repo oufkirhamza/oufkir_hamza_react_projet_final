@@ -2,6 +2,7 @@ import { Tabs } from 'antd';
 import React, { useContext, useEffect, useState } from 'react';
 import kodas from '../../../assets/img/ID9329_22_model.jpg'
 import { MyContext } from '../../../utils/contextProvider';
+import { useNavigate } from 'react-router-dom';
 
 export const ThirdSection = () => {
     const [fltProduct, setFltProduct] = useState([])
@@ -32,6 +33,7 @@ export const ThirdSection = () => {
     }
     const [btnNew, setBtnNew] = useState(true)
     const [btnOld, setBtnOld] = useState(false)
+    const navigate = useNavigate('')
     return (
         <div className='flex flex-col gap-2 border-b-2'>
             <div className='w-[100%] flex gap-4 border-b-2 justify-center'>
@@ -46,7 +48,7 @@ export const ThirdSection = () => {
                             <img src={element.image} className='bg-[#505050f3]' />
                             <div className='flex  justify-between'>
                                 <p className='text-xl font-bold'>{element.price} $</p>
-                                <button className='px-3 py-1 mb-7 bg-black text-white rounded-full'>ADD TO CART</button>
+                                <button onClick={()=>{navigate(`/product/${element.name}`)}} className='px-3 py-1 mb-7 bg-black text-white rounded-full'>ADD TO CART</button>
                             </div>
                         </div>
                     )

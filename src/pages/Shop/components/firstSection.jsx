@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import banner from "../../../assets/img/header3.png"
 import lll from "../../../assets/img/Argentina_1994_Away_Jersey_Blue_IS0266_HM4.jpg"
 import { MyContext } from '../../../utils/contextProvider';
+import { useNavigate } from 'react-router-dom';
 export const FirstSection = () => {
     const [products, setProducts, data, setData] = useContext(MyContext)
     const [showedProduct, setShowedProduct] = useState([])
@@ -16,6 +17,7 @@ export const FirstSection = () => {
         let Pfltr = products.filter(element => element.price >= a && element.price < b)
         setShowedProduct(Pfltr)
     }
+    const navigate = useNavigate('')
     return (
         <>
             <div className='relative object-cover pt-[68px]'>
@@ -67,7 +69,7 @@ export const FirstSection = () => {
                     {
                         showedProduct.map(element =>
                             <div className='w-[22%] h-[50vh] flex flex-col gap-3 relative justify-center bg-[#EBEEEF] rounded-lg p-4 max-[430px]:w-[90%]'>
-                                <h1 className='text-xl font-bold'>{element.name}</h1>
+                                <h1 onClick={()=>{navigate("/product")}} className='cursor-pointer text-xl font-bold hover:text-red-500'>{element.name}</h1>
                                 <img src={element.image} className='bg-[#505050f3]' />
                                 <div className='flex  justify-between'>
                                     <p className='text-xl font-bold'>{element.price} $</p>
