@@ -32,10 +32,10 @@ export const Header = () => {
                     <Link className='hover:underline' to="/about">About</Link>
                     <Link className='hover:underline' to="/contact">Contact</Link>
                 </Navbar.Collapse>
-                <div className='w-[17px] absolute top-4 right-5 h-[17px] flex justify-center items-center text-white rounded-full bg-red-500 '>
+                <div className='w-[17px] absolute top-4 right-5 h-[17px] flex justify-center items-center text-white rounded-full bg-red-500 max-[430px]:right-[70px] max-[430px]:top-6'>
                     <p>{panier.length}</p>
                 </div>
-                <div className={`w-[30%] p-5 bg-white fixed top-[68px] max-[430px]:w-[90%] right-0 flex flex-col shadow-lg ${viewCart ? "block" : "hidden"}`}>
+                <div className={`w-[30%] p-5 bg-white fixed top-[68px] max-[430px]:w-[90%] right-0 flex flex-col shadow-lg  ${viewCart ? "block" : "hidden"}`}>
                     <div className='flex flex-col gap-2 '>
                         {
                             panier.map(element =>

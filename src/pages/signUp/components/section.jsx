@@ -43,6 +43,7 @@ export const SignupSection = () => {
             setSecondName('')
             setEmail('')
             setPassW('')
+            navigate('/profile')
         } else {
             setCheckerA(true)
         }
