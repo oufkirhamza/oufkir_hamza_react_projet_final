@@ -1,5 +1,5 @@
 import './firstSection.sass'
-import React from 'react';
+import React, { useContext } from 'react';
 import img1 from "../../../assets/img/adida_banner1.jpg"
 import img2 from "../../../assets/img/pexels-keith-wako-89910.jpg"
 import img3 from "../../../assets/img/alex-_AOL4_fDQ3M-unsplash.jpg"
@@ -7,10 +7,12 @@ import img4 from "../../../assets/img/pexels-sebastiaan-stam-1480686.jpg"
 import img5 from "../../../assets/img/pexels-chris-wölfer-1561010.jpg"
 import img6 from "../../../assets/img/randy-rooibaatjie-el5tvhXcpAw-unsplash.jpg"
 import { useNavigate } from 'react-router-dom';
+import { MyContext } from '../../../utils/contextProvider';
 
 
 export const SeconSection = () => {
     const navigate = useNavigate("")
+    const [products, setProducts, data, setData, panier, setPanier] = useContext(MyContext)
     return (
         <>
             <div className='py-20 w-[100%] flex gap-2 flex-wrap justify-center px-30 max-[430px]:flex-col max-[430px]:items-center'>

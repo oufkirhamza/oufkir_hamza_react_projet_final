@@ -7,7 +7,7 @@ import { AlerteA } from './alert3';
 import { MyContext } from '../../../utils/contextProvider';
 
 export const SignupSection = () => {
-    const [products, setProducts, data, setData] = useContext(MyContext)
+    const [products, setProducts, data, setData, panier, setPanier] = useContext(MyContext)
     const navigate = useNavigate("")
     const [firstName, setFirstName] = useState('');
     const [secondName, setSecondName] = useState('');

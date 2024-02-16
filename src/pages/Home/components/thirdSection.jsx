@@ -6,7 +6,10 @@ import { useNavigate } from 'react-router-dom';
 
 export const ThirdSection = () => {
     const [fltProduct, setFltProduct] = useState([])
-    const [products, setProducts, data, setData] = useContext(MyContext)
+    const [products, setProducts, data, setData, panier, setPanier] = useContext(MyContext)
+    const addToPanier = (param)=>{
+        panier.push(param)
+    }
     useEffect(()=>{
         setBtnNew(true);
         setBtnOld(false);
@@ -44,11 +47,11 @@ export const ThirdSection = () => {
                 {
                     fltProduct.map(element =>
                         <div className='w-[22%] h-[60vh] flex flex-col gap-3 relative justify-center bg-[#EBEEEF] rounded-lg p-4 max-[430px]:w-[80%]'>
-                            <h1 className='text-xl font-bold'>{element.name}</h1>
+                            <h1 onClick={()=>{navigate(`/product/${element.name}`)}} className='text-xl font-bold hover:text-red-500 cursor-pointer'>{element.name}</h1>
                             <img src={element.image} className='bg-[#505050f3]' />
                             <div className='flex  justify-between'>
                                 <p className='text-xl font-bold'>{element.price} $</p>
-                                <button onClick={()=>{navigate(`/product/${element.name}`)}} className='px-3 py-1 mb-7 bg-black text-white rounded-full'>ADD TO CART</button>
+                                <button onClick={()=>{addToPanier(element)}} className='px-3 py-1 mb-7 bg-black text-white rounded-full'>ADD TO CART</button>
                             </div>
                         </div>
                     )

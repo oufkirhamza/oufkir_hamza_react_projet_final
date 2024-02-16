@@ -1,7 +1,11 @@
 
 import './firstSection.sass'
 import banner from "../../../assets/img/header2.png"
+import { useContext } from 'react'
+import { MyContext } from '../../../utils/contextProvider'
 export const FirstSectionAbout = () => {
+    const [products, setProducts, data, setData, panier, setPanier] = useContext(MyContext)
+
     return (
         <>
             <div className='relative object-cover pt-[68px]'>

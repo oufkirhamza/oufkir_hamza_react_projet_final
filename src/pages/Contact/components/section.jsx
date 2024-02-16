@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import banner from "../../../assets/img/header1.png"
+import { MyContext } from '../../../utils/contextProvider';
 
 export const Section = () => {
+    const [products, setProducts, data, setData, panier, setPanier] = useContext(MyContext)
+
     return (
         <>
             <div className='w-[100%] pt-[68px]'>
