@@ -4,6 +4,8 @@ import kodas from '../../../assets/img/ID9329_22_model.jpg'
 import { MyContext } from '../../../utils/contextProvider';
 
 export const ThirdSection = () => {
+    const [fltProduct, setFltProduct] = useState([])
+    const [products, setProducts, data, setData] = useContext(MyContext)
     useEffect(()=>{
         setBtnNew(true);
         setBtnOld(false);
@@ -12,8 +14,6 @@ export const ThirdSection = () => {
         let newA = [newP[0], newP[1], newP[2], newP[3]]
         setFltProduct(newA)
     },[])
-    const [fltProduct, setFltProduct] = useState([])
-    const [products, setProducts] = useContext(MyContext)
     const newProduct = () => {
         setBtnNew(true);
         setBtnOld(false);
@@ -38,10 +38,10 @@ export const ThirdSection = () => {
                 <button onClick={newProduct} className={`border cursor-pointer rounded-t-lg px-3 py-1 border-b-0 ${btnNew ? "bg-red-700 text-white" : ""}`}>NEW</button>
                 <button onClick={oldProduct} className={`border cursor-pointer rounded-t-lg px-3 py-1 border-b-0 ${btnOld ? "bg-red-700 text-white" : ""}`}>OLD</button>
             </div>
-            <div className='w-[100%] py-10  justify-center items-center flex gap-4 '>
+            <div className='w-[100%] py-10  justify-center items-center flex gap-4 max-[430px]:flex-col'>
                 {
                     fltProduct.map(element =>
-                        <div className='w-[22%] h-[60vh] flex flex-col gap-3 relative justify-center bg-[#EBEEEF] rounded-lg p-4'>
+                        <div className='w-[22%] h-[60vh] flex flex-col gap-3 relative justify-center bg-[#EBEEEF] rounded-lg p-4 max-[430px]:w-[80%]'>
                             <h1 className='text-xl font-bold'>{element.name}</h1>
                             <img src={element.image} className='bg-[#505050f3]' />
                             <div className='flex  justify-between'>

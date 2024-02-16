@@ -8,14 +8,8 @@ export const FooterSection = () => {
         <>
             <Footer container className='bg-slate-100'>
                 <div className="w-full ">
-                    <div className="w-full flex p-5  sm:flex gap-10 md:flex md:grid-cols-1">
-                        <div className='w-[36%] flex flex-col gap-4'>
-                            {/* <Footer.Brand
-                                href="https://flowbite.com"
-                                src="https://flowbite.com/docs/images/logo.svg"
-                                alt="Flowbite Logo"
-                                name="Flowbite"
-                            /> */}
+                    <div className="w-full flex p-5  sm:flex gap-10 md:flex md:grid-cols-1 max-[430px]:flex-col">
+                        <div className='w-[36%] flex flex-col gap-4 max-[430px]:w-[90%]'>
                             <h1 className='font-medium text-xl'>Getting Started</h1>
                             <p className=''>Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879</p>
                             <div className="mt-4 flex items-start space-x-6 ">
@@ -26,9 +20,9 @@ export const FooterSection = () => {
                                 <Footer.Icon href="#" icon={BsDribbble} />
                             </div>
                         </div>
-                        <div className="flex gap-10 w-[60%] ">
+                        <div className="flex gap-10 w-[60%] max-[430px]:flex-col max-[430px]:w-[100%]">
                             <div >
-                                <Footer.Title title="categories" className='font-bold text-black' />
+                                <Footer.Title title="categories" className='font-bold text-black ' />
                                 <Footer.LinkGroup col>
                                     <Footer.Link href="#">Men</Footer.Link>
                                     <Footer.Link href="#">Women</Footer.Link>
@@ -54,10 +48,10 @@ export const FooterSection = () => {
                                     <Footer.Link href="#">FAQs</Footer.Link>
                                 </Footer.LinkGroup>
                             </div>
-                            <div className='flex flex-col gap-2 w-[40%]'>
+                            <div className='flex flex-col gap-2 w-[40%] max-[430px]:w-[90%]'>
                                 <Footer.Title title="NEWSLETTER" className='font-bold text-black' />
-                                <input type="text" placeholder='Email Address' className='bg-transparent border-0 border-b outline-none focus:outline-none focus:border-b-red-600' />
-                                <button className='bg-black mt-3 text-white py-3 w-[fit-content] px-6 rounded-full'>SUBSCRIBE</button>
+                                <input type="text" placeholder='Email Address' className='bg-transparent border-0 border-b outline-none focus:outline-none focus:border-b-red-600 max-[430px]:w-[90%]' />
+                                <button className='bg-black mt-3 text-white py-3 w-[fit-content] px-6 rounded-full max-[430px]:px-8'>SUBSCRIBE</button>
                             </div>
                         </div>
                     </div>

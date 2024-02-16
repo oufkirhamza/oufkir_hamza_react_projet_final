@@ -24,7 +24,7 @@ export const SignupSection = () => {
     const [checkerA, setCheckerA] = useState(false)
     const emailPattern = /\S+@\S+\.\S+/;
     const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/;
-    const [valid, setValid]=useState(false)
+    const [valid, setValid] = useState(false)
     const validate = () => {
         if (firstName && secondName && mail && passW) {
             if (!emailPattern.test(mail)) {
@@ -42,32 +42,32 @@ export const SignupSection = () => {
             setFirstName('')
             setSecondName('')
             setEmail('')
-            setPassW('') 
+            setPassW('')
         } else {
             setCheckerA(true)
         }
     }
     return (
         <>
-            <div className='pt-[68px] '>
-                <div className='p-16 ml-10 flex flex-col gap-3'>
-                <div onClick={() => { setCheckerA(false) }} className={`${checkerA ? 'block' : 'hidden'}`}>
-                    <AlerteA />
-                </div>
+            <div className='pt-[68px] pl-8 max-[430px]:w-[100%]  '>
+                <div className='py-16 lg:ml-10 flex flex-col gap-3 max-[430px]:w-[90%] '>
+                    <div onClick={() => { setCheckerA(false) }} className={`${checkerA ? 'block' : 'hidden'}`}>
+                        <AlerteA />
+                    </div>
                     <h1 className='text-4xl'>Create Account</h1>
                     <p className='text-xl'>Your Personal Details</p>
                     <form className='flex flex-col gap-2' >
                         <label >First Name</label>
-                        <input onChange={(e) => { setFirstName(e.target.value) }} value={firstName} type="text" className='px-2 w-[70%] outline-[#4d4d4da0]' placeholder='First Name' />
+                        <input onChange={(e) => { setFirstName(e.target.value) }} value={firstName} type="text" className='px-2 w-[70%] max-[430px]:w-[90%] outline-[#4d4d4da0]' placeholder='First Name' />
                         <label >Last Name</label>
-                        <input onChange={(e) => { setSecondName(e.target.value) }} value={secondName} type="text" className='px-2 w-[70%] border-stone-500' placeholder='Last Name' />
+                        <input onChange={(e) => { setSecondName(e.target.value) }} value={secondName} type="text" className='px-2 w-[70%] max-[430px]:w-[90%] border-stone-500' placeholder='Last Name' />
                         <label >Email</label>
-                        <input onChange={(e) => { setEmail(e.target.value) }} value={mail} type="email" className='px-2 w-[70%] border-stone-500' placeholder='Email' />
+                        <input onChange={(e) => { setEmail(e.target.value) }} value={mail} type="email" className='px-2 w-[70%] border-stone-500 max-[430px]:w-[90%]' placeholder='Email' />
                         <div onClick={() => { setChecker(false) }} className={`${checker ? 'block' : 'hidden'}`}>
                             <Alerte />
                         </div>
                         <label >Password</label>
-                        <input onChange={(e) => { setPassW(e.target.value) }} value={passW} type="password" className='px-2 w-[70%] border-stone-500' placeholder='Password' />
+                        <input onChange={(e) => { setPassW(e.target.value) }} value={passW} type="password" className='px-2 w-[70%] border-stone-500 max-[430px]:w-[90%]' placeholder='Password' />
                         <div onClick={() => { setPChecker(false) }} className={`${pchecker ? 'block' : 'hidden'}`}>
                             <AlerteP />
                         </div>

@@ -6,15 +6,14 @@ export const FirstSectionAbout = () => {
         <>
             <div className='relative object-cover pt-[68px]'>
                 <img src={banner} alt="" />
-                <h1 className='absolute top-[50%] left-[50%] text-white font-bold text-5xl translate-x-[-50%]'>ABOUT</h1>
+                <h1 className='absolute top-[50%] left-[50%] text-white font-bold text-5xl translate-x-[-50%] max-[430px]:text-2xl'>ABOUT</h1>
             </div>
-            <div className='py-16 flex justify-center gap-7 '>
-                <div className='bannerParent w-[22%] h-[50vh] '>
+            <div className='py-16 flex justify-center items-center gap-7 max-[430px]:flex-col '>
+                <div className='bannerParent w-[22%] h-[50vh] max-[430px]:w-[90%]'>
                     <div className='banner'>
-                        {/* <img src={banner}  /> */}
                     </div>
                 </div>
-                <div className='w-[50%] flex flex-col gap-4'>
+                <div className='w-[50%] flex flex-col gap-4 max-[430px]:w-[90%]'>
                     <h1 className='text-xl font-medium '>Our story</h1>
                     <p className='text-slate-500'>Phasellus egestas nisi nisi, lobortis ultricies risus semper nec. Vestibulum pharetra ac ante ut pellentesque. Curabitur fringilla dolor quis lorem accumsan, vitae molestie urna dapibus. Pellentesque porta est ac neque bibendum viverra. Vivamus lobortis magna ut interdum laoreet. Donec gravida lorem elit, quis condimentum ex semper sit amet. Fusce eget ligula magna. Aliquam aliquam imperdiet sodales. Ut fringilla turpis in vehicula vehicula. Pellentesque congue ac orci ut gravida. Aliquam erat volutpat. Donec iaculis lectus a arcu facilisis, eu sodales lectus sagittis. Etiam pellentesque, magna vel dictum rutrum, neque justo eleifend elit, vel tincidunt erat arcu ut sem. Sed rutrum, turpis ut commodo efficitur, quam velit convallis ipsum, et maximus enim ligula ac ligula. Vivamus tristique vulputate ultricies. Sed vitae ultrices orci.</p>
                     <div className='border-l-4 px-4 text-slate-500'>

@@ -9,20 +9,20 @@ export const FourthSection = () => {
 
     return (
         <>
-            <div className='flex p-7 gap-4'>
-                <div className='w-[50%]'>
+            <div className='flex p-7 gap-4 max-[430px]:flex-col '>
+                <div className='w-[50%] max-[430px]:w-[100%]'>
                     <div className='w-[100%] relative overflow-hidden transition-all delay-1000'>
                         <img src={pic} className='hover:scale-105' />
-                        <div className='absolute top-16 text-center ml-5 w-[40%]'>
-                            <h1 className='text-8xl text-white font-bold '>all in</h1>
-                            <h1 className='text-8xl text-white font-bold '>or</h1>
-                            <h1 className='text-8xl text-white font-bold '>nothing</h1>
+                        <div className='absolute top-16 text-center ml-5 w-[40%] max-[430px]:w-[100%] '>
+                            <h1 className='text-8xl text-white font-bold max-[430px]:text-4xl max-[430px]:text-black'>all in</h1>
+                            <h1 className='text-8xl text-white font-bold max-[430px]:text-4xl max-[430px]:text-black'>or</h1>
+                            <h1 className='text-8xl text-white font-bold max-[430px]:text-4xl max-[430px]:text-black'>nothing</h1>
                         </div>
                     </div>
                 </div>
-                <div className='w-[50%] flex flex-col items-center gap-3 p-7 bg-[#EBEEEF]'>
+                <div className='w-[50%] flex flex-col items-center gap-3 p-7 bg-[#EBEEEF] max-[430px]:w-[100%]'>
                     {
-                            <div className='w-[50%]  '>
+                            <div className='w-[50%] max-[430px]:w-[100%]  '>
                                 <img src={pics[0].image} alt="" />
                                 <div className='flex justify-between text-xl font-bold'>
                                     <h1>{pics[0].name}</h1>

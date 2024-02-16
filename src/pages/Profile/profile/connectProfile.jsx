@@ -6,13 +6,13 @@ export const ConnectProfile = () => {
     return (
         <>
             <div className='py-[72px] items-center'>
-                <div className='pt-12 flex gap-2 justify-center '>
-                    <div className='w-[36%] h-[fit-content] py-4 border-2 flex flex-col gap-4 pl-3'>
+                <div className='pt-12 flex gap-2 justify-center items-center max-[430px]:flex-col max-[430px]:w-[100%]'>
+                    <div className='w-[36%] h-[fit-content] py-4 border-2 flex flex-col gap-4 pl-3 max-[430px]:w-[90%]'>
                         <h1 className='text-3xl'>New Customer</h1>
                         <p className='text-slate-400'>By creating an account you will be able to shop faster, be up to date on an order's status, and keep track of the orders you have previously made.</p>
                         <button className='bg-black text-white w-[fit-content] px-5 py-2' onClick={()=>{navigate('/signup')}}>Continue</button>
                     </div>
-                    <div className='w-[45%] py-4 border-2 flex flex-col gap-4  pl-3'>
+                    <div className='w-[45%] py-4 border-2 flex flex-col gap-4 pl-3 max-[430px]:w-[90%]j'>
                         <h1 className='text-3xl'>Retuurning Customer</h1>
                         <form className='flex flex-col gap-2' >
                             <label >Email</label>
