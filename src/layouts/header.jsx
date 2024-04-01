@@ -1,5 +1,5 @@
-import React, { useContext, useState } from 'react';
-
+import React, { useContext, useEffect, useState } from 'react';
+import "./header.sass"
 import { Avatar, Dropdown, Navbar } from 'flowbite-react';
 import logo from "../assets/img/logo.png"
 import { Link, useNavigate } from 'react-router-dom';
@@ -15,6 +15,10 @@ export const Header = () => {
     panier.forEach(element => {
         total = element.price + total
     });
+    const [productCount, setProductCount] = useState(0)
+    useEffect(() => {
+        setProductCount(panier.length)
+    }, [panier.length])
     return (
         <div className='flex  '>
             <Navbar fluid className='shadow-lg shadow-[#00000025] py-5 w-[100%] fixed top-0 z-50'>
@@ -33,9 +37,9 @@ export const Header = () => {
                     <Link className='hover:underline' to="/contact">Contact</Link>
                 </Navbar.Collapse>
                 <div className='w-[17px] absolute top-4 right-5 h-[17px] flex justify-center items-center text-white rounded-full bg-red-500 max-[430px]:right-[70px] max-[430px]:top-6'>
-                    <p>{panier.length}</p>
+                    <p>{productCount}</p>
                 </div>
-                <div className={`w-[30%] p-5 bg-white fixed top-[68px] max-[430px]:w-[90%] right-0 flex flex-col shadow-lg  ${viewCart ? "block" : "hidden"}`}>
+                <div className={`cart w-[30%] p-5 bg-white max-h-[90vh] overflow-auto fixed top-[68px] max-[430px]:w-[90%] right-0 flex flex-col shadow-lg  ${viewCart ? "block" : "hidden"}`}>
                     <div className='flex flex-col gap-2 '>
                         {
                             panier.map(element =>
@@ -43,7 +47,7 @@ export const Header = () => {
                                     <img width={100} src={element.image} alt="" />
                                     <div className='fle flex-col'>
                                         <h1 className='font-bold'>{element.name}</h1>
-                                        <p>1 x {element.price} $</p>
+                                        <p>{ element.quantity } x {element.price} $</p>
                                     </div>
                                 </div>
                             )

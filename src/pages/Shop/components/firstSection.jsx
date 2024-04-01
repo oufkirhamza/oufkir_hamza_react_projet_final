@@ -4,8 +4,14 @@ import { MyContext } from '../../../utils/contextProvider';
 import { useNavigate } from 'react-router-dom';
 export const FirstSection = () => {
     const [products, setProducts, data, setData, panier, setPanier] = useContext(MyContext)
+    const newPan = [...panier]
     const addToPanier = (param)=>{
-        panier.push(param)
+        let check = panier.find
+        if (!newPan.includes(param)) {
+            newPan.push(param)
+        }
+        setPanier(newPan)
+        param.quantity += 1
     }
     const [showedProduct, setShowedProduct] = useState([])
     useEffect(() => {
@@ -14,12 +20,18 @@ export const FirstSection = () => {
     const genderFilter = (param) => {
         let fltr = products.filter(element => element.gender == param)
         setShowedProduct(fltr)
-    }
+    }   
     const priceFilter = (a, b) => {
         let Pfltr = products.filter(element => element.price >= a && element.price < b)
         setShowedProduct(Pfltr)
     }
     const navigate = useNavigate('')
+
+    // const [testCheck,setTestCheck] = useState(false)
+    // useEffect(() => {
+    //     setTestCheck(true)
+    // }, [])
+
     return (
         <>
             <div className='relative object-cover pt-[68px]'>
@@ -67,7 +79,7 @@ export const FirstSection = () => {
                         </div>
                     </div>
                 </div>
-                <div className='w-[80%] py-10 flex gap-4 flex-wrap justify-center items-center max-[430px]:flex-col'>
+                <div className='w-[80%] py-10 flex gap-4 flex-wrap justify-center max-[430px]:flex-col'>
                     {
                         showedProduct.map(element =>
                             <div className='w-[22%] h-[50vh] flex flex-col gap-3 relative justify-center bg-[#EBEEEF] rounded-lg p-4 max-[430px]:w-[90%]'>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Alert, Space } from 'antd';
-export const AlerteA = () => (
+export const AlerteP = () => (
     <Space
         
         direction="vertical"
@@ -10,7 +10,7 @@ export const AlerteA = () => (
         }}
     >
         <Alert 
-        message="Please fill in all the required fields before submitting the form." 
+        message="Password is not correct" 
         type="error" 
         // closable
         />

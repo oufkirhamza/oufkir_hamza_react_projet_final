@@ -10,7 +10,7 @@ export const Alerte = () => (
         }}
     >
         <Alert 
-        message="Invalid email format. Please enter a valid email address (click on the alert to disable)" 
+        message="Invalid email format. Please enter a valid email address" 
         type="error" 
         // closable
         />

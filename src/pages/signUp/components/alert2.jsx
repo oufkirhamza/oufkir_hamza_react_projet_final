@@ -9,7 +9,7 @@ export const AlerteP = () => (
         }}
     >
         <Alert
-            message="Your password must contain at least one uppercase letter, one lowercase letter, one digit, and one special character. (click on the alert to disable)"
+            message="Your password must contain at least one uppercase letter, one lowercase letter, one digit, and one special character."
             type="error"
             // closable
         />

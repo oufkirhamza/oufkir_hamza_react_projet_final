@@ -10,17 +10,17 @@ export const FifthSection = () => {
             <div className='py-16 flex flex-col gap-8 '>
                 <h1 className='font-bold text-2xl text-center'>OUR BLOG</h1>
                 <div className='w-[100%] flex gap-5 justify-center items-center overflow-hidden max-[430px]:flex-col'>
-                    <div className='w-[25%] flex  flex-col gap-2 hover:scale-105 max-[430px]:w-[90%]'>
+                    <div className='cursor-pointer w-[25%] flex  flex-col gap-2 hover:scale-105 max-[430px]:w-[90%]'>
                         <img className='' src={pic1} alt="" />
                         <h1>Black Friday Guide: Best Sales & Discount Codes</h1>
                         <p className='text-slate-400'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed turpis sed lorem dignissim vulputate nec cursus ante. Nunc sit...</p>
                     </div>
-                    <div className='w-[25%] flex flex-col gap-2 hover:scale-105 max-[430px]:w-[90%]'>
+                    <div className='cursor-pointer w-[25%] flex flex-col gap-2 hover:scale-105 max-[430px]:w-[90%]'>
                         <img src={pic2} alt="" />
                         <h1>Black Friday Guide: Best Sales & Discount Codes</h1>
                         <p className='text-slate-400'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed turpis sed lorem dignissim vulputate nec cursus ante. Nunc sit...</p>
                     </div>
-                    <div className='w-[25%] flex flex-col gap-2 hover:scale-105 max-[430px]:w-[90%]'>
+                    <div className='cursor-pointer w-[25%] flex flex-col gap-2 hover:scale-105 max-[430px]:w-[90%]'>
                         <img src={pic3} alt="" />
                         <h1>Black Friday Guide: Best Sales & Discount Codes</h1>
                         <p className='text-slate-400'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sed turpis sed lorem dignissim vulputate nec cursus ante. Nunc sit...</p>

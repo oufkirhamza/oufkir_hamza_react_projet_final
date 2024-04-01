@@ -1,28 +1,28 @@
 import React, { useContext, useState } from 'react';
-import banner from "../../../assets/img/header1.png"
+import "./cart.sass";
+import banner from "../../../assets/img/header1.png";
 import { Table } from 'flowbite-react';
 import pic from "../../../assets/img/Argentina_1994_Away_Jersey_Blue_IS0266_HM4.jpg"
 import { MyContext } from '../../../utils/contextProvider';
 import { useNavigate } from 'react-router-dom';
 
 export const Section = (param) => {
-    const [quant, setQuant] = useState(1)
-    const counting = (param) => {
-        if (quant > 0) {
-            if (param == "m") {
-                setQuant(quant - 1);
-            } else {
-                setQuant(quant + 1);
-            }
-        } else {
-            return setQuant(1)
+    const [products, setProducts, data, setData, panier, setPanier] = useContext(MyContext)
+    const addCounting = (param) => {
+        const updatedParam = { ...param, quantity: param.quantity + 1 };
+        setPanier(prevPanier => prevPanier.map(item => item.id === param.id ? updatedParam : item));
+    }
+    const minusCounting = (param) => {
+        if (param.quantity > 0) {
+            const updatedParam = { ...param, quantity: param.quantity - 1 };
+            setPanier(prevPanier => prevPanier.map(item => item.id === param.id ? updatedParam : item));
         }
     }
     const navigate = useNavigate("")
-    const [products, setProducts, data, setData, panier, setPanier] = useContext(MyContext)
     let total = 0
     panier.forEach(element => {
-        total = element.price + total
+        let stotal = element.price * element.quantity
+        total += stotal
     });
 
     return (
@@ -58,13 +58,13 @@ export const Section = (param) => {
                                             <Table.Cell onClick={() => { navigate("/product") }} className='cursor-pointer hover:text-red-500'>{element.name}</Table.Cell>
                                             <Table.Cell>{element.price}</Table.Cell>
                                             <Table.Cell>
-                                                <div>
-                                                    <button onClick={() => { counting("m") }} className='p-2 bg-slate-400 border border-stone-400 text-white w-[10%] font-bold '>-</button>
-                                                    <input type="number" className='w-[10%] p-2 pointer-events-none border ' value={quant} />
-                                                    <button onClick={() => { counting("a") }} className='p-2 bg-slate-400 border border-stone-400 text-white w-[10%] font-bold '>+</button>
+                                                <div className='qut'>
+                                                    <button onClick={() => { minusCounting(element) }} className='p-2 bg-slate-400 border border-stone-400 text-white w-[10%] font-bold '>-</button>
+                                                    <input type="number" className='w-[17%] text-center py-2 pointer-events-none border ' value={element.quantity} />
+                                                    <button onClick={() => { addCounting(element) }} className='p-2 bg-slate-400 border border-stone-400 text-white w-[10%] font-bold '>+</button>
                                                 </div>
                                             </Table.Cell>
-                                            <Table.Cell>{element.price * quant}</Table.Cell>
+                                            <Table.Cell>{element.price * element.quantity}</Table.Cell>
                                         </Table.Row>
                                     )
                                 }
@@ -72,10 +72,10 @@ export const Section = (param) => {
                             </Table.Body>
                         </Table>
                     </div>
-                    <div className='border flex justify-end'>
+                    <div className='border flex justify-end p-2'>
                         <h1 className='text-xl font-bold'>Total : {total} $</h1>
                     </div>
-                        <button className='bg-black text-white w-[fit-content] px-4 py-2 rounded-full'>PROCEED TO CHECK OUT</button>
+                    <button className='bg-black text-white w-[fit-content] px-4 py-2 rounded-full'>PROCEED TO CHECK OUT</button>
                 </div>
 
             </div>

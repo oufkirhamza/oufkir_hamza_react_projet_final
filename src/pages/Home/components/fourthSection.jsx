@@ -30,7 +30,7 @@ export const FourthSection = () => {
                                 </div>
                             </div>
                     }
-                    <div className='flex gap-7'>
+                    <div className='flex gap-7 '>
                         <div className='flex flex-col justify-center items-center w-[40px] h-[40px] border-2 border-[#636363] p-6 '>
                             <h1 className='font-bold'>-20</h1>
                             <h1>Days</h1>
