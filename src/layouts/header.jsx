@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import "./header.sass"
 import { Avatar, Dropdown, Navbar } from 'flowbite-react';
-import logo from "../assets/img/logo.png"
+import logo from "../assets/img/adidas_logo.png"
 import { Link, useNavigate } from 'react-router-dom';
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 import pic from "../assets/img/Argentina_1994_Away_Jersey_Blue_IS0266_HM4.jpg"
@@ -13,7 +13,8 @@ export const Header = () => {
     const [products, setProducts, data, setData, panier, setPanier] = useContext(MyContext)
     let total = 0
     panier.forEach(element => {
-        total = element.price + total
+        let stotal = element.price * element.quantity
+        total += stotal
     });
     const [productCount, setProductCount] = useState(0)
     useEffect(() => {
@@ -21,9 +22,9 @@ export const Header = () => {
     }, [panier.length])
     return (
         <div className='flex  '>
-            <Navbar fluid className='shadow-lg shadow-[#00000025] py-5 w-[100%] fixed top-0 z-50'>
+            <Navbar fluid className='shadow-lg shadow-[#00000025] py-4 w-[100%] fixed top-0 z-50'>
                 <Navbar.Brand className='cursor-pointer' onClick={() => { navigate(`/`) }}>
-                    <img src={logo} className="mr-3" />
+                    <img width={60} src={logo} className="mr-3" />
                 </Navbar.Brand>
                 <div className="flex md:order-2 items-center gap-5">
                     <Avatar onClick={() => { navigate('/profile') }} rounded size="xs" className='border-1 cursor-pointer border-[#4a4a4a70] rounded-full' />

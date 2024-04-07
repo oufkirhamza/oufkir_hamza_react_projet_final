@@ -7,8 +7,14 @@ import { useNavigate } from 'react-router-dom';
 export const ThirdSection = () => {
     const [fltProduct, setFltProduct] = useState([])
     const [products, setProducts, data, setData, panier, setPanier] = useContext(MyContext)
+    const newPan = [...panier]
     const addToPanier = (param)=>{
-        panier.push(param)
+        let check = panier.find
+        if (!newPan.includes(param)) {
+            newPan.push(param)
+        }
+        setPanier(newPan)
+        param.quantity += 1
     }
     useEffect(()=>{
         setBtnNew(true);
